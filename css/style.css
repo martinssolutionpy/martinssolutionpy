@@ -1,0 +1,978 @@
+:root {
+  --azul:#001a35;
+  --cinza:#eceaea;
+  --vermelho:#a40008;
+}
+
+html { scroll-behavior:smooth; }
+
+body {
+  font-family:'Gantari',sans-serif;
+  background:var(--cinza);
+  padding-top:90px;
+  
+
+}
+
+/* NAVBAR */
+.nav-custom {
+ 
+  height:90px;
+}
+
+
+.navbar{
+    height:90px;
+    transition:.3s;
+    
+    background:rgba(236, 234, 234, 0.50); /* azul com transparência */
+    backdrop-filter:blur(5px); /* 🔥 efeito vidro premium */
+}
+
+.navbar>.container {
+  height:100%;
+  display:flex;
+  align-items:center;
+}
+
+.logo {
+  height:70px;
+}
+
+/* LINKS */
+.nav-link {
+  color: var(--azul)!important;
+  font-weight: 600;
+}
+.nav-link:hover { font-weight:700; }
+
+
+/* LANGUAGE */
+.lang-switch {
+  color:var(--vermelho);
+  text-decoration:none;
+  font-weight:700;
+}
+
+/* WHATSAPP */
+.btn-whatsapp {
+  height:44px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  background:#25d366;
+  color:#fff!important;
+}
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 14px 32px;
+
+  font-family: 'Gantari', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+
+  background-color: #25D366;
+  color: #fff;
+  text-decoration: none;
+
+  border-radius: 6px;
+  border: none;
+
+  white-space: nowrap;
+}
+
+/* Ícone */
+.btn-whatsapp i {
+  font-size: 1.25rem;
+}
+
+/* Hover sem alterar cor */
+.btn-whatsapp:hover {
+  background-color: #25D366;
+  color: #fff;
+}
+
+/* Responsivo */
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    padding: 12px 16px 20px;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .btn-whatsapp {
+    font-size: 0.95rem;
+    padding: 12px 20px;
+  }
+}
+
+
+
+/* HERO */
+
+.hero{
+    padding-top:50px; /* compensa menu fixo */
+    padding-bottom:80px;
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    background:#eceaea;
+}
+
+
+.hero-text h1{
+    font-family:'Gantari', sans-serif;
+    font-weight:700;
+    color:#001a35;
+    font-size:clamp(70px, 4vw, 70px);
+    line-height:1;
+    margin-bottom:20px;
+}
+
+.text-destaque{
+    color:#a40008;
+}
+
+.hero-subtitle{
+    font-family:'Gantari', sans-serif;
+    font-weight:400;
+    font-size:18px;
+    color:#001a35;
+    margin-bottom:35px;
+    max-width:520px;
+}
+
+
+
+.btn-whatsapp-hero{
+    background:#a40008;
+    color:#fff;
+    padding:14px 26px;
+    border-radius:8px;
+    font-weight:600;
+    text-decoration:none;
+    display:inline-block;
+    width:auto;
+    transition:.3s;
+}
+
+.btn-whatsapp-hero:hover{
+    background:#8a0006;
+    color:#fff;
+    transform:translateY(-2px);
+}
+
+
+
+.hero-media{
+    width:100%;
+    height:520px;
+    border-radius:14px;
+    overflow:hidden;
+}
+
+.hero-media img,
+.hero-media video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/*Responsivo*/
+
+@media(max-width:900px){
+
+    .hero-container{
+        flex-direction:column;
+        text-align:center;
+        gap:40px;
+        
+    }
+
+    .hero-text h1{
+        font-size:34px;
+    }
+
+}
+
+@media(max-width:992px){
+
+.hero{
+    padding-top:120px;
+    min-height:auto;
+}
+
+.hero-media{
+    height:380px;
+}
+
+.hero-text{
+    text-align:center;
+}
+
+.hero-subtitle{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+}
+
+/* SECTIONS */
+section { scroll-margin-top:90px; }
+.section-light { padding:80px 0; }
+.section-dark { padding:80px 0; background:var(--azul); color:#fff; }
+
+
+
+/* QUEM SOMOS */
+
+.quem-somos{
+    background:#001a35;
+    padding:100px 0;
+}
+
+/* TITULO GRANDE IGUAL HERO */
+
+.quem-text h2{
+    font-family:'Gantari', sans-serif;
+    font-weight:700;
+    font-size:clamp(32px,4vw,52px);
+    color:#fff;
+    margin-bottom:25px;
+}
+
+/* TEXTOS */
+
+.quem-text p{
+    color:#eceaea;
+    font-size:17px;
+    line-height:1.7;
+    margin-bottom:18px;
+}
+
+
+/* ASSINATURA */
+
+.assinatura{
+    display:block;
+    margin-top:25px;
+    color:#fff;
+    font-weight:600;
+}
+
+
+/* MOSAICO PREMIUM */
+
+.mosaico-premium{
+    display:grid;
+    grid-template-columns:1.2fr 0.8fr;
+    grid-template-rows:repeat(2, minmax(180px, 20vh)); /* aqui eu mudo a altura*/
+    gap:18px;
+}
+
+/* TODAS AS FOTOS */
+
+.mosaico-premium .foto{
+    position:relative;
+    overflow:hidden;
+    border-radius:16px;
+}
+
+/* IMAGENS */
+
+.mosaico-premium img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform .6s ease;
+}
+
+/* HOVER ESTILO APPLE */
+
+.mosaico-premium .foto:hover img{
+    transform:scale(1.06);
+}
+
+/* FOTO GRANDE */
+
+.grande{
+    grid-row:1 / 3;
+}
+
+/* FOTO VERTICAL */
+
+.vertical{
+    grid-row:1 / 3;
+}
+
+/* SOMBRA SUAVE (cara de site caro) */
+
+.mosaico-premium .foto{
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+@media(min-width:992px){
+    .quem-text{
+        padding-left:30px;
+    }
+
+}
+
+
+/* ######PARAGUAI####### */
+
+/* =========================================
+   SEÇÃO — PORQUE PARAGUAI
+========================================= */
+
+.porque-paraguai{
+  width:100%;
+}
+
+
+/* GRID PRINCIPAL */
+
+.pq-wrapper{
+  display:grid;
+  grid-template-columns:0.95fr 1.25fr; /* tamanho dos grids */
+  
+}
+
+
+
+/* =========================================
+   COLUNA ESQUERDA (VERMELHA)
+========================================= */
+
+.pq-left{
+  background:#a40008;
+  color:#fff;
+
+  display:flex;
+  align-items:center;
+
+  padding:110px 110px;
+}
+
+
+/* controla largura do texto */
+.pq-left-content{
+  max-width:620px;
+}
+
+
+/* título grande padrão hero */
+.pq-title{
+  font-size:48px;
+  font-weight:800;
+  line-height:1.1;
+  margin-bottom:28px;
+}
+
+.pq-title span{
+  color:#ffffff;
+}
+
+
+/* texto */
+.pq-left p{
+  font-size:18px;
+  line-height:1.7;
+}
+
+
+
+/* =========================================
+   COLUNA DIREITA (VANTAGENS)
+========================================= */
+
+.pq-right{
+  background:var(--cinza);
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  padding:90px; /* respiro*/
+ 
+}
+
+
+
+/* GRID DAS VANTAGENS */
+
+.pq-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:16px;
+
+  width:100%;
+  max-width:820px; /* impede esticar */
+
+}
+
+@media(max-width:992px){
+
+  .pq-wrapper{
+    grid-template-columns:1fr;
+  }
+
+  .pq-left,
+  .pq-right{
+    padding:70px 10px;
+  }
+
+  .pq-title{
+    font-size:34px;
+  }
+
+  .pq-grid{
+    max-width:100%;
+  }
+
+}
+
+/* =========================================
+   CARDS DE VANTAGEM
+========================================= */
+
+.vantagem{
+  padding:14px 18px;   /* finos */
+  border-radius:10px;
+
+  font-weight:600;
+  font-size:15.5px;
+  line-height:1.45;
+
+  transition:.25s;
+}
+
+
+/* PREENCHIDO */
+.vantagem.fill{
+  background:#fff;
+  color:var(--azul);
+   font-size:18px;
+}
+
+
+/* OUTLINE */
+.vantagem.outline{
+  border:2px solid #fff;
+  color:#fff;
+  background:transparent;
+}
+
+
+/* HOVER MINIMALISTA */
+.vantagem:hover{
+  transform:translateY(-4px);
+}
+
+.vantagem-titulo{
+    font-family:'Gantari', sans-serif;
+    font-weight: 800;
+    
+    
+}
+
+/*#####SERVICES######*/
+
+/* ===============================
+   SERVIÇOS
+=================================*/
+
+.servicos{
+    background:var(--azul);
+    padding:90px 0;
+}
+
+/* TITULO */
+
+.titulo-secao{
+    font-family:'Gantari', sans-serif;
+    font-weight:800;
+    font-size:clamp(2rem,3vw,2.8rem);
+    color:#fff;
+}
+
+.titulo-secao span{
+    color:var(--vermelho);
+}
+
+/* GRID RESPIRO EXTRA (opcional mas profissional) */
+
+.servicos .row{
+    margin-top:10px;
+}
+
+/* CARD */
+
+.servico-card{
+    background:#fff;
+    padding:38px 30px;
+    border-radius:14px;
+    height:100%;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+    transition:.35s;
+}
+
+/* HOVER */
+
+.servico-card:hover{
+    transform:translateY(-8px);
+}
+
+/* ÍCONE */
+
+.servico-icon{
+    font-size:42px;
+    color:var(--azul);
+    margin-bottom:18px;
+    
+}
+
+/* TITULO DO CARD */
+
+.servico-card h3{
+    font-family:'Gantari', sans-serif;
+    font-weight:800;
+    font-size:1.25rem;
+    color:#001a35;
+    margin-bottom:10px;
+}
+
+.servico-card{
+    background:#fff;
+    padding:38px 30px;
+    border-radius:14px;
+    height:100%;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+    transition:.35s;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+
+/* TEXTO */
+
+.servico-card p{
+    color:#334;
+    line-height:1.6;
+    margin:0;
+}
+
+
+/* ===============================
+   INSTITUIÇÕES
+================================ */
+
+.instituicoes{
+    background:#fff;
+    padding:70px 0;
+}
+
+.instituicoes-titulo{
+    text-align:center;
+    font-weight:600;
+    color:var(--azul);
+    margin-bottom:40px;
+}
+
+/* GRID */
+
+.logos-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    align-items:center;
+    gap:40px;
+}
+
+/* LOGOS */
+
+.logos-grid img{
+    width:100%;
+    max-height:70px; /* ← controla TODAS */
+    object-fit:contain;
+    filter:grayscale(100%);
+    opacity:.8;
+    transition:.25s;
+}
+
+/* efeito premium */
+.logos-grid img:hover{
+    filter:grayscale(0);
+    opacity:1;
+    transform:scale(1.05);
+}
+
+@media(max-width:991px){
+
+    .logos-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:30px;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .logos-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+/* ===============================
+   CTA SERVIÇOS
+=================================*/
+
+.cta-servicos{
+    margin-top:70px;
+}
+
+.cta-servicos h3{
+    color:#fff;
+    font-weight:700;
+    margin-bottom:22px;
+}
+
+/* BOTÃO */
+
+.btn-orcamento{
+    display:inline-block;
+    background:var(--vermelho);
+    color:#fff;
+    padding:14px 32px;
+    border-radius:8px;
+    font-weight:700;
+    text-decoration:none;
+    transition:.25s;
+}
+
+.btn-orcamento:hover{
+    background:#000f22;
+}
+
+
+
+/* ================================
+   DEPOIMENTOS
+================================ */
+
+.depoimentos{
+    background:var(--cinza);
+    padding:90px 0;
+}
+
+.titulo-secao2{
+    font-family:'Gantari', sans-serif;
+    font-weight:800;
+    font-size:clamp(2rem,3vw,2.8rem);
+    color:var(--azul);
+}
+.subtitulo{
+    color:var(--azul);
+    opacity:.9;
+    margin-top:10px;
+}
+
+/* NOTA */
+
+.avaliacao-geral{
+    text-align:center;
+    margin:40px 0 60px;
+}
+
+.estrelas{
+    color:#FFC107;
+    font-size:28px;
+    letter-spacing:6px;
+}
+
+.avaliacao-geral p{
+    color:var(--azul);
+    margin-top:8px;
+}
+
+/* CARD */
+
+
+/* garante altura igual entre slides */
+.depoimentos-slider .swiper-slide{
+    display:flex;
+    height:auto;
+}
+
+/* card ocupa toda a altura do slide */
+.depoimento-card{
+    background:#fff;
+    padding:32px;
+    border-radius:14px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    height:100%;
+}
+
+
+
+/* aspas premium */
+
+.depoimento-card::before{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    content:"“";
+    position:absolute;
+    top:-18px;
+    left:18px;
+    font-size:80px;
+    color:var(--azul);
+}
+
+/* TEXTO */
+
+.depoimento-card p{
+    flex-grow:1;
+    color:#001a35;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+/* CLIENTE */
+
+.cliente strong{
+    color:#001a35;
+    font-weight:800;
+}
+
+/* SLIDER RESPIRO */
+
+.depoimentos-slider{
+    padding-bottom:10px;
+}
+
+/* CTA */
+
+.cta-depoimentos{
+    text-align:center;
+    margin-top:70px;
+}
+
+.cta-depoimentos h3{
+    color:var(--azul);
+    margin-bottom:20px;
+}
+
+
+
+/* ===============================
+   CTA FINAL
+================================= */
+/* ===== CTA FINAL ===== */
+
+.cta-final{
+    background:#2b2b2b; /* grafite elegante */
+    padding:70px 0;
+    color:#fff;
+}
+
+
+/* GRID */
+
+.cta-grid{
+    display:grid;
+    grid-template-columns:2fr 1.2fr 1fr;
+    gap:40px;
+    align-items:stretch;
+}
+
+
+/* BLOCOS */
+
+.cta-bloco{
+    position:relative;
+    padding:10px 30px;
+}
+
+
+
+/* LINHA DIVISÓRIA COM ALTURA TOTAL */
+
+.cta-bloco:not(:last-child)::after{
+    content:"";
+    position:absolute;
+    right:-20px;
+    top:0;
+    height:100%;
+    width:1px;
+    background:#ffffff55;
+}
+
+
+
+/* ===== BLOCO 1 ===== */
+
+.cta-chamada h2{
+    font-size:30px;
+    font-weight:600;
+    margin-bottom:16px;
+    line-height:1.2;
+}
+
+.cta-chamada p{
+    color:#d1d1d1;
+    margin-bottom:26px;
+    max-width:480px;
+}
+
+
+/* BOTÃO */
+
+.cta-botao{
+    display:inline-block;
+    background:#a40008;
+    color:#fff;
+    padding:16px 34px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:700;
+    transition:.25s;
+}
+
+.cta-botao:hover{
+    transform:translateY(-3px);
+    background:#c3050f;
+}
+
+
+/* ===== CONTATO ===== */
+
+.info-item{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    margin-bottom:18px;
+}
+
+.icone{
+    font-size:20px;
+}
+
+.cta-contato p{
+    color:#e4e4e4;
+}
+
+
+/* ===== SOCIAL ===== */
+
+.cta-social h4{
+    margin-bottom:14px;
+}
+
+.social-icons{
+    display:flex;
+    gap:14px;
+}
+
+.social{
+    color:#fff;
+    text-decoration:none;
+    transition:.2s;
+}
+
+.social:hover{
+    opacity:.7;
+}
+
+@media(max-width:991px){
+
+    .cta-grid{
+        grid-template-columns:1fr;
+        gap:35px;
+        text-align:left; /* ← agora alinha à esquerda */
+    }
+
+    .cta-bloco{
+        padding:0 0 30px 0;
+    }
+
+    /* REMOVE linha vertical */
+    .cta-bloco::after{
+        display:none;
+    }
+
+    /* CRIA linha horizontal */
+    .cta-bloco:not(:last-child){
+        border-bottom:1px solid #ffffff40;
+        padding-bottom:30px;
+    }
+
+
+    .cta-bloco{
+        padding-left:0;
+        padding-right:0;
+    }
+
+}
+
+/* ===============================
+   FOOTER
+================================= */
+.footer {
+  background-color: #001a35;
+  color: #eceaea;
+  padding: 32px 0;
+}
+
+/* Ícones sociais */
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-link {
+  color: #eceaea;
+  font-size: 1.4rem;
+  transition: transform 0.2s ease;
+}
+
+/* Hover sem trocar cor */
+.social-link:hover {
+  color: #eceaea;
+  transform: translateY(-2px);
+}
+
+/* Texto */
+.footer small {
+  display: block;
+  margin-top: 12px;
+  font-size: 0.85rem;
+}
+
+
+/* MOBILE */
+@media (max-width:991px){
+  body { padding-top:70px; }
+  section { scroll-margin-top:70px; }
+  .logo { height:48px; }
+  .navbar-collapse { background:var(--cinza); }
+}
+
+
+
+
